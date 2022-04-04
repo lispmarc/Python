@@ -1,0 +1,33 @@
+#######################################################################
+# TOML aims to be a minimal configuration file format that's easy 
+# to read due to obvious semantics. TOML is designed to map 
+# unambiguously to a hash table. TOML should be easy to parse into 
+# data structures in a wide variety of languages
+# See: https://toml.io/en/ for more info
+# Note: In VS Code we added the exesion Even Better TOML to help us 
+#       editing this file
+#######################################################################
+# The pyproject.toml contains build system requirements and information
+# which is used by pip to build a package
+# This pyproject.toml file contains the minimum information needed
+# for the new Python packaging standard 
+# 
+# See: https://peps.python.org/pep-0518/  for more info on the standard
+# See: https://pythonwheels.com/ for  more info on wheels
+# See: https://setuptools.pypa.io/en/latest/userguide/index.html for 
+# more info on setuptools
+#
+# 'requires' gives a list of packages that are needed to build your 
+#            package. Listing something here will only make it 
+#            available during the build, not after it is installed.
+# 'build-backend' is the name of Python object that will be used to 
+#                 perform the build. If you were to use a different 
+#                 build system, such as flit or poetry, those would 
+#                 go here, and the configuration details would be 
+#                 completely different than the setuptools 
+#                 configuration described below.
+#######################################################################
+
+[build-system]
+requires = ["setuptools","wheel"]
+build-backend = "setuptools.build_meta"
